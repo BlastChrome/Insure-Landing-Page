@@ -31,12 +31,14 @@ header {
 main {
   background-color: lightcoral;
 }
+nav {
+  display: none;
+}
 
 .header-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* position: relative; */
 }
 .nav-links {
   position: absolute;
@@ -44,17 +46,15 @@ main {
   left: 0;
   width: 100%;
   background: #2b282f;
-  height: 130vh;
+  height: 100vh;
   background-image: url(/images/bg-pattern-mobile-nav.svg);
-  background-size: auto;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   top: 80px;
   display: flex;
   flex-direction: column;
-
   text-align: center;
-  z-index: 999;
 }
 .nav-link {
   color: white;
@@ -69,9 +69,20 @@ main {
   height: 60px;
   line-height: 60px;
 }
+
+.nav-links li a:hover {
+  color: rgb(187, 187, 187);
+}
 .plans {
   border: 1px solid #fff;
 }
 .hamburger {
   cursor: pointer;
+}
+#nav-toggle {
+  display: none;
+}
+
+#nav-toggle:checked ~ nav {
+  display: block;
 }
