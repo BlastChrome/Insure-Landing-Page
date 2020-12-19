@@ -32,7 +32,6 @@ main {
   background-color: lightcoral;
 }
 nav {
-  display: none;
 }
 
 .header-wrap {
@@ -55,6 +54,9 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 250ms ease-in-out;
 }
 .nav-link {
   color: white;
@@ -68,6 +70,8 @@ nav {
   width: 90%;
   height: 60px;
   line-height: 60px;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 150ms;
 }
 
 .nav-links li a:hover {
@@ -83,6 +87,58 @@ nav {
   display: none;
 }
 
-#nav-toggle:checked ~ nav {
-  display: block;
+#nav-toggle:checked ~ nav .nav-wrap .nav-links {
+  transform: scale(1, 1);
+}
+
+#nav-toggle:checked ~ nav .nav-wrap .nav-links li {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+main {
+  background-image: url(/images/image-intro-mobile.jpg);
+  /* background-position: center; */
+  background-size: cover;
+  width: auto;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-togge-label,
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    width: 40%;
+    position: absolute;
+    right: 1rem;
+  }
+  .nav-link {
+    color: #8d8b8e;
+  }
+  .nav-links {
+    all: unset;
+    display: flex;
+    width: auto;
+    /* background: red; */
+  }
+
+  .nav-links li {
+    all: unset;
+    opacity: 1;
+    margin-left: 35px;
+  }
+
+  .plans a {
+    color: black;
+  }
+
+  .nav-links li a {
+    font-size: 10px;
+  }
 }
