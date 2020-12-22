@@ -25,6 +25,13 @@ html {
   font-size: 0.7rem;
 }
 
+.gone {
+  display: none;
+}
+.dt-header-image {
+  display: none;
+}
+
 body {
 }
 .wrap {
@@ -119,6 +126,12 @@ main {
   color: white;
   height: 500px;
   position: relative;
+}
+.sec-a .img-1-dt {
+  display: none;
+}
+.sec-a .img-2-dt {
+  display: none;
 }
 .sec-a .img-1 {
   margin: 0;
@@ -275,9 +288,15 @@ footer {
   padding-bottom: 2rem;
 }
 @media screen and (min-width: 800px) {
+  header {
+  }
   .nav-togge-label,
   .hamburger {
     display: none;
+  }
+
+  .wrap {
+    width: 80%;
   }
 
   nav {
@@ -286,6 +305,8 @@ footer {
     width: 40%;
     position: absolute;
     right: 1rem;
+    z-index: 2;
+    padding-right: 70px;
   }
   .nav-link {
     color: #8d8b8e;
@@ -307,5 +328,117 @@ footer {
   .nav-links li a {
     font-size: 14px;
     font-weight: 500;
+  }
+  main {
+    display: none;
+  }
+
+  .sec-a .img-1,
+  .sec-a .img-2 {
+    display: none;
+  }
+
+  .sec-a {
+    padding-top: 100px;
+    padding-bottom: 490px;
+  }
+
+  .sec-a-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .sec-a .img-1-dt {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    top: 400px;
+  }
+  .sec-a .img-2-dt {
+    position: absolute;
+    display: block;
+    right: -20px;
+    top: -80px;
+  }
+  .sec-a-wrap h1 {
+    padding-top: 0;
+    font-family: "DM Serif Display", serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 100%;
+    width: 40%;
+  }
+  .sec-a-wrap p {
+    width: 50%;
+    text-align: left;
+    word-spacing: 200%;
+    line-height: 200%;
+  }
+
+  .sec-a-wrap .horizontal {
+    width: 150px;
+    padding-bottom: 50px;
+  }
+  .dt-header-image {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+
+  .sec-b-wrap {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sec-b-wrap h1 {
+    font-size: 4rem;
+  }
+  .sec-b-wrap .horizontal {
+  }
+  .sec-b-bot-wrap {
+    display: flex;
+  }
+  .sec-b-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sec-b-text p {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  .sec-c {
+  }
+
+  .sec-c-wrap {
+    display: flex;
+    height: 250px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+  }
+  .sec-c-wrap h1 {
+    padding: 0;
+    font-size: 4rem;
+    text-align: left;
+    width: 60%;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-bottom {
+    justify-content: space-around;
+    display: flex;
   }
 }
